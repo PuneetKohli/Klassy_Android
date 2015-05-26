@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTimePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/orange_accent</item>
+    </style>
+
+    <style name="MyTimePickerStyle" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:headerBackground">@color/orange_accent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:timePickerDialogTheme">@style/MyTimePickerDialogTheme</item>
+        <item name="colorPrimaryDark">@color/purple_dark_primary</item>
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorAccent">@color/orange_accent</item>
+    </style>
+
+</resources>

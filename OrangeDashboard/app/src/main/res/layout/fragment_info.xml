@@ -1,0 +1,607 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="true"
+    android:id="@+id/scrollview_info">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Basic Info"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:id="@+id/name_label"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="What's your store called?"
+                android:id="@+id/editText_name"
+                android:editable="true"
+                android:inputType="textNoSuggestions|text|textCapCharacters"
+                android:lines="1"
+                android:maxLines="1"
+                app:met_primaryColor="@color/purple_primary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Handle:"
+                android:id="@+id/handle_label"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="A good short name ex MyStore"
+                android:id="@+id/editText_handle"
+                android:editable="true"
+                android:inputType="textNoSuggestions|text"
+                android:lines="1"
+                android:maxLines="1"
+                app:met_primaryColor="@color/purple_primary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:id="@+id/about_label"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write a few lines about your store here"
+                android:id="@+id/editText_about"
+                android:editable="true"
+                app:met_primaryColor="@color/purple_primary"
+                android:elegantTextHeight="false"
+                android:maxLines="4"
+                android:autoText="false"
+                android:layout_weight="1"
+                android:inputType="textCapSentences|textLongMessage|textMultiLine"
+                android:gravity="top|left"
+                android:minLines="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:id="@+id/address_label"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Where's your store located?"
+                android:id="@+id/editText_address"
+                android:editable="true"
+                android:inputType="textNoSuggestions|textCapWords|textMultiLine"
+                app:met_primaryColor="@color/purple_primary"
+                android:elegantTextHeight="true"
+                android:gravity="top|left"
+                android:maxLines="3"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Locality:"
+                android:id="@+id/locality_label"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select your locality"
+                android:id="@+id/editText_locality"
+                android:editable="true"
+                android:inputType="textNoSuggestions|textCapWords|textPostalAddress|text"
+                app:met_primaryColor="@color/purple_primary"
+                android:elegantTextHeight="true"
+                android:gravity="top|left"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Working Hours:"
+                android:id="@+id/hours_label"
+                android:layout_weight="0"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Opening Time"
+                    android:id="@+id/editText_start_time"
+                    android:inputType="textNoSuggestions|textCapWords|textMultiLine"
+                    app:met_primaryColor="@color/purple_primary"
+                    android:elegantTextHeight="true"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="To"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Closing Time"
+                    android:id="@+id/editText_end_time"
+                    android:editable="true"
+                    android:inputType="textNoSuggestions|textCapWords|textMultiLine"
+                    app:met_primaryColor="@color/purple_primary"
+                    android:elegantTextHeight="true"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:rowCount="2"
+                android:columnCount="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="On"
+                    android:id="@+id/textView_on"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mon"
+                    android:checked="false"
+                    android:id="@+id/checkbox_monday"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tues"
+                    android:checked="false"
+                    android:id="@+id/checkbox_tuesday"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wed"
+                    android:checked="false"
+                    android:id="@+id/checkbox_wednesday"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thurs"
+                    android:checked="false"
+                    android:id="@+id/checkbox_thursday"
+                    android:layout_marginRight="5dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fri"
+                    android:checked="false"
+                    android:id="@+id/checkbox_friday"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thurs"
+                    android:checked="false"
+                    android:id="@+id/checkbox_saturday"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sun"
+                    android:checked="false"
+                    android:id="@+id/checkbox_sunday"
+                    android:layout_marginLeft="5dp"
+                    />
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment Type:"
+                android:id="@+id/payment_label"
+                android:layout_weight="0"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/radiogroup_payment_type"
+                        android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_cash"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:layout_weight="1"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/radio_cashandcard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash and Card"
+                    android:layout_weight="1"
+                    android:checked="false"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contact Info"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone No:"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile/Landline number"
+                android:id="@+id/editText_phone"
+                android:inputType="textNoSuggestions|phone|text|textCapCharacters"
+                app:met_primaryColor="@color/purple_primary"
+                app:met_errorColor="@color/red_error"
+                app:met_minCharacters="8"
+                app:met_maxCharacters="11"
+                android:maxLength="11"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Alternate Phone:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alternate number"
+                android:id="@+id/editText_phone_alternate"
+                android:inputType="textNoSuggestions|phone|text|textCapCharacters"
+                app:met_primaryColor="@color/purple_primary"
+                app:met_errorColor="@color/red_error"
+                app:met_minCharacters="8"
+                app:met_maxCharacters="11"
+                android:maxLength="11"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="contact@storename.com"
+                android:id="@+id/editText_email"
+                app:met_primaryColor="@color/purple_primary"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Website:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="www.example.com"
+                android:id="@+id/editText_website"
+                app:met_primaryColor="@color/purple_primary"
+                android:inputType="textUri"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Online Store:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="www.flipkart.com/seller/traders5253"
+                android:id="@+id/editText_online_store"
+                app:met_primaryColor="@color/purple_primary"
+                android:inputType="textUri"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Facebook:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="www.fb.com/mypagelink"
+                android:id="@+id/editText_facebook"
+                app:met_primaryColor="@color/purple_primary"
+                android:inputType="textUri"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Twitter:"
+                android:gravity="start|center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="www.twitter.com/myhandle"
+                android:id="@+id/editText_twitter"
+                app:met_primaryColor="@color/purple_primary"
+                android:inputType="textUri"/>
+        </LinearLayout>
+
+        <com.dashboard.orange.orangedashboard.CustomLayout.ExpandableHeightGridView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:numColumns="2"
+            android:nestedScrollingEnabled="false"
+            android:choiceMode="singleChoice"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

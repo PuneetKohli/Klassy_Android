@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name = "purple_50">#EDE7F6</color>
+    <color name = "purple_primary_light">#D1C4E9</color>
+    <color name = "purple_200">#9FA8DA</color>
+    <color name = "purple_300">#B39DDB</color>
+    <color name = "purple_400">#7E57C2</color>
+    <color name = "purple_600">#5E35B1</color>
+    <color name = "purple_800">#4527A0</color>
+    <color name = "purple_900">#311B92</color>
+    <color name = "purple_primary">#673AB7</color>
+    <color name = "purple_dark_primary">#512DA8</color>
+    <color name = "text_primary">#212121</color>
+    <color name = "text_secondary">#727272</color>
+    <color name = "divider_grey">#B6B6B6</color>
+    <color name="orange_accent">#FF5722</color>
+    <color name="red_error">#D50000</color>
+</resources>
