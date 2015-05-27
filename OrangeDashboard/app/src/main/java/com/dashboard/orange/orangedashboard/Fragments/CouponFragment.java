@@ -3,10 +3,16 @@ package com.dashboard.orange.orangedashboard.Fragments;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dashboard.orange.orangedashboard.Adapters.Coupon_Adapter;
+import com.dashboard.orange.orangedashboard.AppManager;
 import com.dashboard.orange.orangedashboard.R;
 
 /**
@@ -24,6 +30,9 @@ public class CouponFragment extends Fragment
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    Coupon_Adapter mAdapter;
+    AppManager manager;
+
 
 
     /**
@@ -59,6 +68,7 @@ public class CouponFragment extends Fragment
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        manager = (AppManager) getActivity().getApplication();
     }
 
     @Override
@@ -66,9 +76,23 @@ public class CouponFragment extends Fragment
                              Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.coupon_item, container, false);
+        return inflater.inflate(R.layout.fragment_coupon, container, false);
+
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+        RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.couponRecycler);
+        mRecyclerView.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(llm);
+        mAdapter = new Coupon_Adapter(getActivity(), manager.getCoupons());
+        Log.d("Coupons", manager.getCoupons().get(0).getCouponName());
+        mRecyclerView.setAdapter(mAdapter);
+    }
 
     public static CouponFragment newInstance()
     {
